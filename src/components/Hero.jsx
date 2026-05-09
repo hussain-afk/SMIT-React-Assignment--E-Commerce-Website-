@@ -44,7 +44,7 @@ const Hero = () => {
             <div className="flex -space-x-3">
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="w-10 h-10 rounded-full border-2 border-[#020617] bg-slate-800 flex items-center justify-center overflow-hidden">
-                  <img src={`https://i.pravatar.cc/150?u=${i}`} alt="user" />
+                  <img src={"https://www.gamingislife.sg/cdn/shop/files/QUANTUM_100M2_PURPLE.jpg?v=1729234434&width=1214"} alt="user" />
                 </div>
               ))}
             </div>
@@ -66,6 +66,7 @@ const Hero = () => {
                {/* Placeholder for Product Image */}
                <div className="absolute inset-0 flex items-center justify-center p-12">
                   <ShoppingBag className="w-32 h-32 text-indigo-500/20 group-hover:scale-110 transition-transform duration-500" />
+                  <img src="https://www.gamingislife.sg/cdn/shop/files/QUANTUM_100M2_PURPLE.jpg?v=1729234434&width=1214" alt="user" className="w-full h-full text-indigo-500/20 group-hover:scale-110 transition-transform duration-500 rounded-2xl" />
                </div>
                
                {/* Floating Info Tag */}
