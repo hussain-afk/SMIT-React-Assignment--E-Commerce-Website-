@@ -7,6 +7,7 @@ import ProductsPage from '../pages/Products'
 import AboutPage from '../pages/About'
 import ContactPage from '../pages/Contact'
 import NotFoundPage from '../pages/NotFound'
+import AuthPage from '../pages/AuthPage'
 
 
 function Routing() {
@@ -20,6 +21,7 @@ function Routing() {
               <Route path="/products/:id" element={<ProductDetail/>}/>
               <Route path="/about" element={<AboutPage/>}/>
               <Route path="/contact" element={<ContactPage/>}/>
+              <Route path="/auth" element={<AuthPage/>}/>
             </Route>
         </Routes>
     </BrowserRouter>

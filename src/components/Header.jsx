@@ -1,10 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
+import {useNavigate} from "react-router-dom";
 import { ShoppingCart, User, Search, Menu, Bell, Moon, Sun } from 'lucide-react';
 import { ThemeContext } from './themeContext';
+import { AuthContext } from './AuthContext';
 
 const Header = ({ onMenuClick }) => {
+  
   const { theme, toggleTheme } = useContext(ThemeContext);
-
+  const { userImg } = useContext(AuthContext);
+   
   const isLight = theme === "light";
   
   // Custom "Soft" Theme Palette (Removing all pure whites)
@@ -70,7 +74,11 @@ const Header = ({ onMenuClick }) => {
         </button>
 
         <div className={`ml-2 w-9 h-9 rounded-xl ${isLight ? "bg-slate-200" : "bg-slate-800"} border ${border} flex items-center justify-center cursor-pointer hover:scale-105 transition-transform`}>
-          <User className={`w-5 h-5 ${textSecondary}`} />
+          { userImg ? (
+            <img src={userImg} alt="User" className="w-full h-full rounded-xl object-cover" />
+          ) : (
+            <User className={`w-5 h-5 ${textSecondary}`} />
+          )}
         </div>
       </div>
     </nav>

@@ -4,7 +4,6 @@ import Sidebar from '../components/Sidebar';
 import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../components/Footer';
 import { ThemeContext } from '../components/themeContext';
-
 const RootLayout = () => {
   const { theme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(true);
